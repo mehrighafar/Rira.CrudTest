@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoFixture" />
+    <PackageReference Include="coverlet.collector" />
+    <PackageReference Include="dotenv.net" />
+    <PackageReference Include="FluentAssertions" />
+    <PackageReference Include="Google.Protobuf" />
+    <PackageReference Include="Grpc.Net.Client" />
+    <PackageReference Include="Grpc.Tools">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="MongoDB.Driver" />
+    <PackageReference Include="NUnit" />
+    <PackageReference Include="NUnit.Analyzers">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NUnit3TestAdapter" />
+    <PackageReference Include="SpecFlow.NUnit" />
+    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" />
+    <PackageReference Include="Testcontainers.MongoDb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Rira.CrudTest.Core\Rira.CrudTest.Core.csproj" />
+    <ProjectReference Include="..\..\src\Rira.CrudTest.Infrastructure\Rira.CrudTest.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Rira.CrudTest.UseCases\Rira.CrudTest.UseCases.csproj" />
+    <ProjectReference Include="..\..\src\Rira.CrudTest.Web\Rira.CrudTest.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Initialization\Grpc\Protos\user.proto" GrpcServices="Client" />
+  </ItemGroup>
+
+</Project>

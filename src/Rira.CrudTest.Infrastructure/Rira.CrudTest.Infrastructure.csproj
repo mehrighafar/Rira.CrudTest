@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.Extensions.Logging" />
+    <PackageReference Include="MongoDB.Driver" />
+    <PackageReference Include="URF.Core.Mongo" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Rira.CrudTest.Core\Rira.CrudTest.Core.csproj" />
+    <ProjectReference Include="..\Rira.CrudTest.UseCases\Rira.CrudTest.UseCases.csproj" />
+  </ItemGroup>
+</Project>

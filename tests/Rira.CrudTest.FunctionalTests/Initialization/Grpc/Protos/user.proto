@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+option csharp_namespace = "Rira.CrudTest.FunctionalTests.Initialization.Grpc.Protos";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+message User {
+  string id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string national_code = 4;
+  google.protobuf.Timestamp date_of_birth = 5;
+}
+
+message CreateUserRequest {
+  string first_name = 1;
+  string last_name = 2;
+  string national_code = 3;
+  google.protobuf.Timestamp date_of_birth = 4;
+}
+
+message UpdateUserRequest {
+  string id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string national_code = 4;
+  google.protobuf.Timestamp date_of_birth = 5;
+}
+
+message UserIdRequest {
+  string id = 1;
+}
+
+message UserResponse {
+  User user = 1;
+}
+
+message UserListResponse {
+  repeated User users = 1;
+}
+
+service Users {
+  rpc Add (CreateUserRequest) returns (UserResponse);
+  rpc GetById (UserIdRequest) returns (UserResponse);
+  rpc Update (UpdateUserRequest) returns (UserResponse);
+  rpc Delete (UserIdRequest) returns (google.protobuf.Empty);
+  rpc GetAll (google.protobuf.Empty) returns (UserListResponse);
+}
