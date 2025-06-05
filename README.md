@@ -67,7 +67,7 @@ The project follows a layered architecture with a focus on separation of concern
    ```env
    MONGODB_CONNECTION_STRING=mongodb://mongodb:27017
    MONGODB_DATABASE_NAME=SampleDb
-   MONGODB_COLLECTION_NAME=Customer
+   MONGODB_COLLECTION_NAME=User
 
    COLLECTOR=http://otel-collector:4317
    LOKI=http://loki:3100
@@ -87,7 +87,7 @@ The project follows a layered architecture with a focus on separation of concern
    ```env
    MONGODB_CONNECTION_STRING=mongodb://localhost:27018 
    MONGODB_DATABASE_NAME=SampleTestDb
-   MONGODB_COLLECTION_NAME=CustomerEntity
+   MONGODB_COLLECTION_NAME=UserEntity
    API_BASE_ADDRESS=http://localhost:57679
 
    COLLECTOR=http://otel-collector:4317
